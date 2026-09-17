@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W3XC99LF');</script>
+<!-- Google Tag Manager (carregamento adiado para depois do evento load — performance)
+     Para voltar ao snippet padrão, troque o bloco abaixo pelo snippet original do GTM. -->
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(w,d,s,l,i){function load(){if(w.__gtmLoaded)return;w.__gtmLoaded=1;w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)}
+if(d.readyState==='complete')setTimeout(load,300);else w.addEventListener('load',function(){setTimeout(load,300)});
+['pointerdown','keydown','touchstart','scroll'].forEach(function(e){w.addEventListener(e,load,{once:true,passive:true})});
+})(window,document,'script','dataLayer','GTM-W3XC99LF');
+</script>
 <!-- End Google Tag Manager -->
 <title>Virgínio Advocacia | Direito Trabalhista</title>
 <meta name="description" content="Horas extras não pagas, FGTS sem depósito, problemas na rescisão ou trabalho sem registro? O Virgínio Advocacia analisa seu caso de forma individualizada e orienta sobre os caminhos previstos na legislação.">
@@ -20,19 +23,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:description" content="Analise sua situação trabalhista com um advogado. Atendimento individualizado pelo WhatsApp.">
 <meta property="og:image" content="assets/og-image.jpg">
 <meta property="og:locale" content="pt_BR">
-<link rel="preload" as="image" href="assets/hero-desktop.webp" media="(min-width: 768px)">
 <link rel="preload" as="image" href="assets/hero-mobile.webp" media="(max-width: 767px)">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/LuminarySerif-Bold.woff2" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-desktop-1280.webp" media="(min-width: 768px) and (max-width: 1300px)">
+<link rel="preload" as="image" href="assets/hero-desktop.webp" media="(min-width: 1301px)">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/LuminarySerif-ExtraBold.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/Inter-var.woff2" crossorigin>
 <style>
-  /* ===== Fonte da marca: Luminary Serif (assets/fonts) ===== */
-  @font-face{font-family:'Luminary Serif';src:url('assets/fonts/LuminarySerif-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:'Luminary Serif';src:url('assets/fonts/LuminarySerif-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-  @font-face{font-family:'Luminary Serif';src:url('assets/fonts/LuminarySerif-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+  /* ===== Fontes locais (assets/fonts) — só os pesos usados ===== */
   @font-face{font-family:'Luminary Serif';src:url('assets/fonts/LuminarySerif-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
   @font-face{font-family:'Luminary Serif';src:url('assets/fonts/LuminarySerif-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+  @font-face{font-family:'Inter';src:url('assets/fonts/Inter-var.woff2') format('woff2');font-weight:400 700;font-style:normal;font-display:swap}
+  /* Fallbacks com métricas ajustadas: o texto ocupa o mesmo espaço antes e depois da fonte carregar (zero CLS) */
+  @font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107.12%;ascent-override:90.49%;descent-override:22.56%;line-gap-override:0%}
+  @font-face{font-family:'Luminary Fallback';src:local('Georgia');size-adjust:108.2%;ascent-override:86.88%;descent-override:22.18%;line-gap-override:0%}
 
   /* ===== Tokens =====
      Paleta: preto / branco / prata. Dourado só em pontos estratégicos
@@ -53,8 +56,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     --cta:#33a852;
     --radius:8px;
     --max:1140px;
-    --font-display:'Luminary Serif',Georgia,'Times New Roman',serif;
-    --font-body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --font-display:'Luminary Serif','Luminary Fallback',Georgia,serif;
+    --font-body:'Inter','Inter Fallback',Arial,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -102,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .fab-wa:hover{transform:scale(1.07)}
   .fab-wa svg{width:30px;height:30px}
-  @media(max-width:767px){.fab-wa{right:18px;bottom:18px}}
+  @media(max-width:767px){.fab-wa{right:18px;bottom:18px;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}.fab-wa.show{opacity:1;pointer-events:auto;transform:none}}
 
   /* ===== Logo com mask (renderiza em qualquer cor sobre qualquer fundo) ===== */
   .logo-mask{
@@ -120,8 +123,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero-photo::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--black) 0%,rgba(10,10,11,.92) 6%,rgba(10,10,11,.75) 14%,rgba(10,10,11,.5) 24%,rgba(10,10,11,.28) 34%,rgba(10,10,11,.12) 44%,rgba(10,10,11,.03) 52%,rgba(10,10,11,0) 58%)}
   .hero-photo::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,11,.15) 0%,rgba(10,10,11,0) 14%,rgba(10,10,11,0) 78%,rgba(10,10,11,.45) 100%)}
   .hero-inner{position:relative;z-index:5;width:100%;max-width:1280px;margin:0 auto;display:flex;align-items:center}
-  .hero-content{display:flex;flex-direction:column;justify-content:center;max-width:720px;padding:clamp(48px,7vw,72px) clamp(20px,5vw,48px);gap:24px;animation:fadeUp .9s ease-out both}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  .hero-content{display:flex;flex-direction:column;justify-content:center;max-width:720px;padding:clamp(48px,7vw,72px) clamp(20px,5vw,48px);gap:24px;animation:fadeUp .6s ease-out both}
+  @keyframes fadeUp{from{transform:translateY(14px)}to{transform:translateY(0)}}
   .hero .eyebrow{color:var(--gold);margin:0;text-shadow:0 2px 16px rgba(0,0,0,.5)}
   .hero h1{font-size:clamp(30px,4.2vw,52px);max-width:640px;font-weight:800;text-shadow:0 4px 30px rgba(0,0,0,.6)}
   .hero .lead{color:var(--silver);max-width:560px;text-shadow:0 2px 18px rgba(0,0,0,.55)}
@@ -130,18 +133,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero-action .micro{margin:0}
   @media(max-width:1100px){.hero-content{max-width:560px}.hero-photo{width:70%}}
   @media(max-width:767px){
-    .hero{display:block;min-height:100svh}
-    .hero-photo{position:relative;width:100%;height:auto;aspect-ratio:790/971;right:auto}
-    .hero-photo img{object-position:center top}
+    .hero{display:flex;flex-direction:column;min-height:100svh}
+    .hero-photo{position:relative;width:100%;height:40svh;min-height:240px;right:auto;flex:none}
+    .hero-photo img{object-position:center 18%}
     .hero-photo::before{background:none}
-    .hero-photo::after{background:linear-gradient(180deg,rgba(10,10,11,.5) 0%,rgba(10,10,11,0) 22%,rgba(10,10,11,0) 42%,rgba(10,10,11,.25) 56%,rgba(10,10,11,.6) 68%,rgba(10,10,11,.88) 78%,var(--black) 86%)}
-    .hero-inner{display:block}
-    .hero-content{max-width:none;padding:0 20px 56px;margin-top:-72px;position:relative;z-index:5;gap:18px}
-    /* foto = 100vw*5/4 de altura; conteúdo sobe 72px; logo fica a 20px do topo do hero */
-    .hero-logo-wrap{position:absolute;left:20px;top:calc(92px - 122.9vw);z-index:6}
+    .hero-photo::after{background:linear-gradient(180deg,rgba(10,10,11,.25) 0%,rgba(10,10,11,0) 25%,rgba(10,10,11,0) 55%,rgba(10,10,11,.55) 78%,var(--black) 100%)}
+    .hero-inner{display:block;flex:1}
+    .hero-content{max-width:none;padding:0 20px 28px;margin-top:-48px;position:relative;z-index:5;gap:14px;animation:none}
+    .hero-logo-wrap{position:static}
+    .hero .logo-mask{width:120px}
     .hero .rule{display:none}
-    .hero-action{width:100%}
+    .hero .eyebrow{font-size:11px}
+    .hero h1{font-size:clamp(26px,7.4vw,32px);max-width:none}
+    .hero .lead{font-size:15px;line-height:1.55;max-width:none}
+    .hero .micro{display:none}
+    .hero-action{width:100%;margin-top:2px}
   }
+  /* telas baixas: esconde o subtítulo para manter head + botão na primeira dobra */
+  @media(max-width:767px) and (max-height:700px){.hero .lead{display:none}.hero-photo{height:36svh}}
 
   /* ===== Situações: título à esquerda, checklist à direita ===== */
   .split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:96px;align-items:start;max-width:980px}
@@ -494,6 +503,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       window.dataLayer.push({ event: 'click_whatsapp', cta_position: this.getAttribute('data-cta') });
     });
   }
+
+  // Mobile: botão flutuante só aparece depois de rolar o hero (não cobre o CTA principal)
+  var fab = document.querySelector('.fab-wa');
+  function toggleFab(){ if (window.scrollY > 240) fab.classList.add('show'); else fab.classList.remove('show'); }
+  window.addEventListener('scroll', toggleFab, { passive: true });
+  toggleFab();
 
   document.getElementById('ano').textContent = new Date().getFullYear();
 </script>

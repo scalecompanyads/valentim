@@ -212,7 +212,9 @@ if(d.readyState==='complete')setTimeout(load,300);else w.addEventListener('load'
   .about-content{margin-left:auto;padding:88px max(20px,calc((100vw - 1140px)/2)) 88px 48px;max-width:calc(600px + max(20px,(100vw - 1140px)/2))}
   .about-content h2{margin-bottom:14px}
   .about-content .lead{margin-bottom:18px}
-  .about .pend{border-left:2px solid var(--gold);padding:10px 14px;background:var(--card-dark);font-size:14px;color:var(--silver-dark);margin-bottom:36px}
+  .about-cred{border-left:2px solid var(--gold);padding:6px 16px;margin-bottom:36px}
+  .about-cred strong{display:block;font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--white);word-spacing:-.2em;line-height:1.2}
+  .about-cred span{display:block;font-size:14px;color:var(--silver);margin-top:4px;letter-spacing:.02em}
   .about-sub{margin-bottom:18px}
   .about-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;margin-bottom:40px}
   .about-list li{display:flex;gap:12px;align-items:flex-start}
@@ -258,7 +260,6 @@ if(d.readyState==='complete')setTimeout(load,300);else w.addEventListener('load'
   .foot-wa{display:inline-flex!important;align-items:center;gap:10px;border:1px solid var(--line-dark)!important;border-radius:6px;padding:12px 16px!important;color:var(--white)!important;font-weight:600;margin-bottom:14px}
   .foot-wa svg{width:20px;height:20px;color:var(--cta)}
   .foot-wa:hover{border-color:var(--silver-dark)!important}
-  .foot-pend{color:var(--silver-dark)}
   .foot-bottom{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:24px 0;border-top:1px solid var(--line-dark);font-size:12.5px;color:var(--silver-dark)}
   @media(max-width:860px){.foot-grid{grid-template-columns:1fr;gap:36px;padding-bottom:40px}.foot-bottom{flex-direction:column;gap:8px}}
 </style>
@@ -397,9 +398,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="about-content">
     <span class="eyebrow">Quem vai te atender</span>
     <h2>Conheça o escritório</h2>
-    <!-- PENDÊNCIA: substituir pelo texto aprovado (nome, OAB, atuação, cidade). Não inventar. -->
     <p class="lead">O Virginio Advocacia atua em Direito Trabalhista, com atendimento individualizado para compreender cada caso, verificar os documentos e orientar sobre os caminhos previstos na legislação.</p>
-    <p class="pend">[PENDÊNCIA] Nome do advogado responsável, número da OAB, tempo de atuação e cidade — aguardando envio do cliente.</p>
+    <div class="about-cred">
+      <strong>Daniel de O. Virginio</strong>
+      <span>OAB 274.018 · Atuando desde 2008 · Cajamar/SP</span>
+    </div>
 
     <span class="eyebrow about-sub">Forma de trabalho</span>
     <ul class="about-list">
@@ -469,8 +472,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="foot-col">
         <h4>Escritório</h4>
-        <!-- PENDÊNCIA: razão social, CNPJ, OAB, endereço -->
-        <p class="foot-pend">[PENDÊNCIA] Razão social · CNPJ<br>OAB · Endereço · Cidade/UF</p>
+        <!-- PENDÊNCIA: CNPJ / razão social, se o cliente quiser exibir -->
+        <p>Daniel de O. Virginio<br>OAB 274.018 · Atuando desde 2008</p>
+        <p>Avenida Jordano Mendes, 68<br>Jordanésia, Cajamar/SP</p>
         <a href="#">Política de Privacidade</a><!-- PENDÊNCIA: link -->
       </div>
     </div>

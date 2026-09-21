@@ -117,10 +117,10 @@ if(d.readyState==='complete')setTimeout(load,300);else w.addEventListener('load'
 
   /* ===== Hero: 100vh, foto em coluna à direita com altura total ===== */
   .hero{position:relative;min-height:100vh;min-height:100svh;background:var(--black);color:var(--white);display:flex;overflow:hidden;padding:0}
-  .hero-photo{position:absolute;top:0;right:0;bottom:0;width:min(78%,1180px);z-index:1}
-  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
+  .hero-photo{position:absolute;top:0;right:0;bottom:0;width:min(48%,800px);z-index:1}
+  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 12%}
   /* Degradê da esquerda: apaga o corte seco e funde a foto com o fundo preto */
-  .hero-photo::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--black) 0%,rgba(10,10,11,.92) 6%,rgba(10,10,11,.75) 14%,rgba(10,10,11,.5) 24%,rgba(10,10,11,.28) 34%,rgba(10,10,11,.12) 44%,rgba(10,10,11,.03) 52%,rgba(10,10,11,0) 58%)}
+  .hero-photo::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--black) 0%,rgba(10,10,11,.9) 5%,rgba(10,10,11,.7) 12%,rgba(10,10,11,.45) 20%,rgba(10,10,11,.25) 28%,rgba(10,10,11,.1) 36%,rgba(10,10,11,0) 44%)}
   .hero-photo::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,11,.15) 0%,rgba(10,10,11,0) 14%,rgba(10,10,11,0) 78%,rgba(10,10,11,.45) 100%)}
   .hero-inner{position:relative;z-index:5;width:100%;max-width:1280px;margin:0 auto;display:flex;align-items:center}
   .hero-content{display:flex;flex-direction:column;justify-content:center;max-width:720px;padding:clamp(48px,7vw,72px) clamp(20px,5vw,48px);gap:24px}
@@ -130,11 +130,11 @@ if(d.readyState==='complete')setTimeout(load,300);else w.addEventListener('load'
   .hero .lead strong{color:var(--white);font-weight:600}
   .hero-action{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:4px}
   .hero-action .micro{margin:0}
-  @media(max-width:1100px){.hero-content{max-width:560px}.hero-photo{width:70%}}
+  @media(max-width:1100px){.hero-content{max-width:560px}.hero-photo{width:54%}}
   @media(max-width:767px){
     .hero{display:flex;flex-direction:column;min-height:100svh}
     .hero-photo{position:relative;width:100%;height:40svh;min-height:240px;right:auto;flex:none}
-    .hero-photo img{object-position:center 18%}
+    .hero-photo img{object-position:center 6%}
     .hero-photo::before{background:none}
     .hero-photo::after{background:linear-gradient(180deg,rgba(10,10,11,.25) 0%,rgba(10,10,11,0) 25%,rgba(10,10,11,0) 55%,rgba(10,10,11,.55) 78%,var(--black) 100%)}
     .hero-inner{display:block;flex:1}
@@ -295,7 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <picture>
       <source media="(max-width:767px)" srcset="assets/hero-mobile.webp">
       <source media="(max-width:1300px)" srcset="assets/hero-desktop-1280.webp">
-      <img src="assets/hero-desktop.webp" alt="Advogado do escritório Virginio Advocacia" fetchpriority="high" width="1619" height="971">
+      <img src="assets/hero-desktop.webp" alt="Advogado do escritório Virginio Advocacia" fetchpriority="high" width="1085" height="1600">
     </picture>
   </div>
   <div class="hero-inner">
